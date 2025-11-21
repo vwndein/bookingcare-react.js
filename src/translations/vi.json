@@ -70,5 +70,14 @@
       "no-schedule": "Bác sĩ không có lịch hẹn vào thời điểm hiện tại",
       "choose": "Chọn và đặt miễn phí "
     }
+  },
+  "admin": {
+    "manage-doctor": {
+      "title": "Tao thêm thông tin doctor",
+      "select-doctor": "Chọn bác sĩ",
+      "intro": "Thông tin giới thiệu:",
+      "add": "Tao thông tin",
+      "save": "Lưu thông tin"
+    }
   }
 }
