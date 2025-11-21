@@ -4,6 +4,10 @@ import {
   createNewUserService,
   getAllUsers,
   deleteUserService,
+  editUserService,
+  getTopDoctorHomeService,
+  getAllDoctors,
+  saveDetailDoctorService,
 } from "../../services/userService";
 import { toast } from "react-toastify";
 
@@ -161,3 +165,125 @@ export const deleteUserSuccess = () => ({
 export const deleteUserFailed = () => ({
   type: actionTypes.DELETE_USER_FAILED,
 });
+
+export const editAUser = (data) => {
+  return async (dispatch, getState) => {
+    try {
+      let res = await editUserService(data);
+      if (res && res.errCode === 0) {
+        toast.success("Update the user succeed!");
+        dispatch(editUserSuccess());
+        dispatch(fetchAllUsersStart());
+      } else {
+        toast.error("Update the user error!");
+        dispatch(editUserFailed());
+      }
+    } catch (e) {
+      toast.error("Update the user error!");
+      dispatch(editUserFailed());
+      console.log("EditUserFailed error", e);
+    }
+  };
+};
+export const editUserSuccess = () => ({
+  type: actionTypes.EDIT_USER_SUCCESS,
+});
+
+export const editUserFailed = () => ({
+  type: actionTypes.EDIT_USER_FAILED,
+});
+
+export const fetchTopDoctor = () => {
+  return async (dispatch, getState) => {
+    try {
+      let res = await getTopDoctorHomeService("");
+      if (res && res.errCode === 0) {
+        dispatch({
+          type: actionTypes.FETCH_TOP_DOCTORS_SUCCESS,
+          dataDoctors: res.data,
+        });
+      } else {
+        dispatch({
+          type: actionTypes.FETCH_TOP_DOCTORS_FAILED,
+        });
+      }
+    } catch (error) {
+      console.log("FETCH_TOP_DOCTORS_FAILED: ", error);
+      dispatch({
+        type: actionTypes.FETCH_TOP_DOCTORS_FAILED,
+      });
+    }
+  };
+};
+
+export const fetchAllDoctors = () => {
+  return async (dispatch, getState) => {
+    try {
+      let res = await getAllDoctors();
+      if (res && res.errCode === 0) {
+        dispatch({
+          type: actionTypes.FETCH_ALL_DOCTORS_SUCCESS,
+          dataDr: res.data,
+        });
+      } else {
+        dispatch({
+          type: actionTypes.FETCH_ALL_DOCTORS_FAILED,
+        });
+      }
+    } catch (error) {
+      console.log("FETCH_ALL_DOCTORS_FAILED: ", error);
+      dispatch({
+        type: actionTypes.FETCH_ALL_DOCTORS_FAILED,
+      });
+    }
+  };
+};
+
+export const saveDetailDoctor = (data) => {
+  return async (dispatch, getState) => {
+    try {
+      let res = await saveDetailDoctorService(data);
+      if (res && res.errCode === 0) {
+        toast.success("Save Infor Detail Doctor Successfully");
+        dispatch({
+          type: actionTypes.SAVE_DETAIL_DOCTOR_SUCCESS,
+        });
+      } else {
+        toast.error("Save Infor Detail Doctor Error !");
+
+        dispatch({
+          type: actionTypes.SAVE_DETAIL_DOCTOR_FAILED,
+        });
+      }
+    } catch (error) {
+      toast.error("Save Infor Detail Doctor Error !");
+      console.log("SAVE_DETAIL_DOCTOR_FAILED: ", error);
+      dispatch({
+        type: actionTypes.SAVE_DETAIL_DOCTOR_FAILED,
+      });
+    }
+  };
+};
+
+export const fetchAllScheduleTime = () => {
+  return async (dispatch, getState) => {
+    try {
+      let res = await getAllCodeService("TIME");
+      if (res && res.errCode === 0) {
+        dispatch({
+          type: actionTypes.FETCH_ALLCODE_SCHEDULE_TIME_SUCCESS,
+          dataTime: res.data,
+        });
+      } else {
+        dispatch({
+          type: actionTypes.FETCH_ALLCODE_SCHEDULE_TIME_FAILED,
+        });
+      }
+    } catch (e) {
+      console.log("FETCH_ALLCODE_SCHEDULE_TIME_FAILED: ", e);
+      dispatch({
+        type: actionTypes.FETCH_ALLCODE_SCHEDULE_TIME_FAILED,
+      });
+    }
+  };
+};
