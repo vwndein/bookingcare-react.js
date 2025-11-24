@@ -25,6 +25,7 @@ import { CustomToastCloseButton } from "../components/CustomToast";
 import ConfirmModal from "../components/ConfirmModal";
 import CustomScrollbars from "../components/CustomScrollbars.js";
 import VerifyEmail from "./Patient/VerifyEmail.js";
+import DetailSpecialty from "./Patient/Specialty/DetailSpecialty.js";
 
 class App extends Component {
   handlePersistorState = () => {
@@ -67,6 +68,10 @@ class App extends Component {
                   <Route
                     path={path.VERIFY_EMAIL_BOOKING}
                     component={VerifyEmail}
+                  />
+                  <Route
+                    path={path.DETAIL_SPECIALTY}
+                    component={DetailSpecialty}
                   />
                 </Switch>
               </CustomScrollbars>
