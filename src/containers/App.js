@@ -7,6 +7,7 @@ import { ToastContainer } from "react-toastify";
 import HomePage from "./HomePage/HomePage.js";
 import DetailDoctor from "./Patient/Doctor/DetailDoctor.js";
 import Doctor from "../routes/Doctor.js";
+import DetailClinic from "./Patient/Clinic/DetailClinic.js";
 
 import {
   userIsAuthenticated,
@@ -73,6 +74,7 @@ class App extends Component {
                     path={path.DETAIL_SPECIALTY}
                     component={DetailSpecialty}
                   />
+                  <Route path={path.DETAIL_CLINIC} component={DetailClinic} />
                 </Switch>
               </CustomScrollbars>
             </div>
