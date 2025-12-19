@@ -7,26 +7,29 @@ class About extends Component {
     return (
       <div className="section-share section-about">
         <div className="section-about-header">
-          Truyen thong noi ve Channel Van Den Pham
+          {" "}
+          <FormattedMessage id="homepage.about" />
         </div>
+
         <div className="section-about-content">
+          {/* LEFT - IMAGE */}
           <div className="content-left">
-            <iframe
-              width="100%"
-              height="400px"
-              src="https://www.youtube.com/embed/147SkAVXEqM?list=PLncHg6Kn2JT6E38Z3kit9Hnif1xC_9VqI"
-              title="#51 Kết Thúc Design Giao Diện Clone BookingCare.vn 4 | React.JS Cho Người Mới Bắt Đầu"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
-            ></iframe>
+            <img
+              src="https://images.pexels.com/photos/6129233/pexels-photo-6129233.jpeg"
+              alt="MedicalHub"
+              style={{
+                width: "100%",
+                height: "400px",
+                objectFit: "cover",
+                borderRadius: "8px",
+              }}
+            />
           </div>
+
+          {/* RIGHT - TEXT */}
           <div className="content-right">
             <p>
-              Trong video này, chúng ta sẽ hoàn tất việc design giao diện theo
-              trang bookingcare.vn. Chúng ta sẽ hoàn thiện những phần đang còn
-              dang dở, để từ video tiếp theo, chúng ta sẽ bắt đầu làm về backend
-              và react để tạo dữ liệu thật cho trang home design này.
+              <FormattedMessage id="homepage.about-content" />
             </p>
           </div>
         </div>
@@ -34,6 +37,7 @@ class About extends Component {
     );
   }
 }
+
 const mapStateToProps = (state) => {
   return {
     isLoggedIn: state.user.isLoggedIn,
@@ -41,8 +45,4 @@ const mapStateToProps = (state) => {
   };
 };
 
-const mapDispatchToProps = (dispatch) => {
-  return {};
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(About);
+export default connect(mapStateToProps)(About);

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { FormattedMessage } from "react-intl";
+import "./HomeFooter.scss";
 
 class HomeFooter extends Component {
   render() {
@@ -8,8 +9,8 @@ class HomeFooter extends Component {
       <div className="home-footer">
         <p>
           &copy; 2025 Van Den Pham.
-          <a href="a">
-            More information, please contact vandenn.pham@gmail.com
+          <a href="mailto:vandenn.pham@gmail.com">
+            More information, please contact: vandenn.pham@gmail.com
           </a>
         </p>
       </div>

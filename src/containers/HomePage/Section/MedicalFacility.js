@@ -36,8 +36,13 @@ class MedicalFacility extends Component {
       <div className="section-share section-medical-facility">
         <div className="section-container">
           <div className="section-header">
-            <span className="title-section">Co so y te noi bat</span>
-            <button className="btn-section">xem them</button>
+            <span className="title-section">
+              <FormattedMessage id="homepage.medical-facility" />
+            </span>
+            <button className="btn-section">
+              {" "}
+              <FormattedMessage id="homepage.more-infor" />
+            </button>
           </div>
           <div className="section-body">
             <Slider {...this.props.settings}>
@@ -53,7 +58,8 @@ class MedicalFacility extends Component {
                       <div
                         className="bg-image section-medical-facility"
                         style={{
-                          backgroundImage: `url(${item.image})`,
+                          // backgroundImage: `url(${item.image})`,
+                          backgroundImage: `url(data:image/jpeg;base64,${item.image})`,
                         }}
                       ></div>
                       <div className="clinic-name">{item.name}</div>

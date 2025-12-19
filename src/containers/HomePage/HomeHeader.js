@@ -128,7 +128,11 @@ class HomeHeader extends Component {
               </div>
               <div className="search">
                 <i className="fas fa-search"></i>
-                <input type="text" placeholder="Tìm chuyên khoa khám bệnh" />
+                <FormattedMessage id="banner.placeholder">
+                  {(placeholder) => (
+                    <input type="text" placeholder={placeholder} />
+                  )}
+                </FormattedMessage>
               </div>
             </div>
 

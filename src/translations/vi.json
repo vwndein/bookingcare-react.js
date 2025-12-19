@@ -12,6 +12,7 @@
     "welcome": "Xin chào"
   },
   "banner": {
+    "placeholder": "Tìm chuyên khoa khám bệnh",
     "title1": "NỀN TẢNG Y TẾ",
     "title2": "CHĂM SÓC SỨC KHỎE TOÀN DIỆN",
     "child1": "Khám chuyên khoa",
@@ -31,9 +32,7 @@
       "clinic": "Phòng khám",
       "manage-clinic": "Quản lý phòng khám",
       "specialty": "Chuyên khoa",
-      "manage-specialty": "Quản lý chuyên khoa",
-      "handbook": "Cẩm nang",
-      "manage-handbook": "Quản lý cẩm nang"
+      "manage-specialty": "Quản lý chuyên khoa"
     },
     "doctor": {
       "manage-schedule": "Quan ly ke hoach kham benh",
@@ -58,7 +57,10 @@
   "homepage": {
     "out-standing-doctor": "Bác sĩ nổi bật tuần qua",
     "more-infor": "Xem thêm",
-    "specialty-popular": "Chuyên khoa phổ biến"
+    "specialty-popular": "Chuyên khoa phổ biến",
+    "medical-facility": "Cơ sở y tế nổi bật",
+    "about": "Về nền tảng MedicalHub",
+    "about-content": "MedicalHub là nền tảng hỗ trợ đặt lịch khám với bác sĩ, bệnh viện trên toàn quốc. Chúng tôi cam kết mang đến trải nghiệm đặt lịch nhanh chóng, minh bạch, giúp người bệnh chủ động chọn bác sĩ phù hợp và tiết kiệm thời gian. Video dưới đây sẽ giải thích quy trình đặt lịch và lợi ích khi sử dụng hệ thống."
   },
   "manage-schedule": {
     "title": "Quản lý kế hoạch khám bệnh của bác sĩ",
@@ -91,7 +93,8 @@
       "btnConfirm": "Xác nhận",
       "btnCancel": "Hủy",
       "priceBooking": "Miễn phí đặt lịch",
-      "price": "Giá khám: "
+      "price": "Giá khám: ",
+      "viewDetail": "Xem chi tiết"
     }
   },
   "admin": {

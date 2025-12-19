@@ -48,6 +48,8 @@ class ManageSpecialty extends Component {
     let file = data[0];
     if (file) {
       let base64 = await CommonUtils.getBase64(file);
+      base64 = base64.replace(/^data:image\/\w+;base64,/, "");
+
       this.setState({
         imageBase64: base64,
       });

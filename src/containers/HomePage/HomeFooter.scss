@@ -1,0 +1,26 @@
+.home-footer {
+  padding: 10px 0;
+  text-align: center;
+  color: #c9d1d9;
+  font-size: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  font-family: "Inter", sans-serif;
+}
+
+.home-footer p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.home-footer a {
+  color: #58a6ff;
+  text-decoration: none;
+  margin-left: 4px;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.home-footer a:hover {
+  text-decoration: underline;
+}

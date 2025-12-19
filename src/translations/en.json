@@ -13,6 +13,7 @@
   },
 
   "banner": {
+    "placeholder": "Find medical specialty",
     "title1": "MEDICAL PLATFORM",
     "title2": "COMPREHENSIVE HEALTH CARE",
     "child1": "Specialized examination",
@@ -60,7 +61,10 @@
   "homepage": {
     "out-standing-doctor": "Outstanding Doctor of the Week",
     "more-infor": "See more",
-    "specialty-popular": "Popular specialty"
+    "specialty-popular": "Popular specialty",
+    "medical-facility": "Outstanding Medical Facility",
+    "about": "About MedicalHub Platform",
+    "about-content": "MedicalHub is a platform that supports booking medical appointments with doctors and hospitals nationwide. We are committed to providing a quick and transparent booking experience, helping patients proactively choose suitable doctors and save time. The video below will explain the booking process and the benefits of using the system."
   },
   "manage-schedule": {
     "title": "Manage doctor's examination plan",
@@ -75,8 +79,8 @@
       "choose": "Choose and buy free  "
     },
     "extra-infor-doctor": {
-      "text-address": "Address of examination",
-      "price": "Examination price:",
+      "text-address": "Address clinic:",
+      "price": "Price:",
       "detail": "See details",
       "payment": "The patient can pay the cost in the form of:",
       "hide-price": "Hide price list"
@@ -93,7 +97,8 @@
       "btnConfirm": "Confirm",
       "btnCancel": "Cancel",
       "priceBooking": "Free Booking",
-      "price": "Examination Fee: "
+      "price": "Examination Fee: ",
+      "viewDetail": "View Details"
     }
   },
   "admin": {

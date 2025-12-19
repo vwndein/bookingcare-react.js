@@ -59,8 +59,8 @@ class OutStandingDoctor extends Component {
                       "binary"
                     );
                   }
-                  let nameEn = `${item.positionData.valueVi}, ${item.firstName} ${item.lastName}`;
-                  let nameVi = `${item.positionData.valueEn}, ${item.lastName} ${item.firstName}`;
+                  let nameVi = `${item.positionData.valueVi}, ${item.firstName} ${item.lastName}`;
+                  let nameEn = `${item.positionData.valueEn}, ${item.lastName} ${item.firstName}`;
 
                   return (
                     <div
@@ -81,7 +81,6 @@ class OutStandingDoctor extends Component {
                           <div>
                             {language === LANGUAGES.VI ? nameVi : nameEn}
                           </div>
-                          <div>Co xuong khop</div>
                         </div>
                       </div>
                     </div>

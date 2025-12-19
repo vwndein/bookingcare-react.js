@@ -54,7 +54,7 @@ class Specialty extends Component {
                       <div
                         className="bg-image section-specialty"
                         style={{
-                          backgroundImage: `url(${item.image})`,
+                          backgroundImage: `url(data:image/jpeg;base64,${item.image})`,
                         }}
                       ></div>
                       <div className="specialty-name">{item.name}</div>
